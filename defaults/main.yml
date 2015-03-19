@@ -1,0 +1,4 @@
+---
+install_dependencies: true
+root:                 /home/{{ansible_env.USER}}/.rbenv
+version:              v0.4.0

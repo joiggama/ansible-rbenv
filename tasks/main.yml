@@ -1,0 +1,32 @@
+---
+- include:       dependencies.yml
+  when:          install_dependencies
+
+- name:          Check current installation
+  shell:         rbenv --version
+  ignore_errors: true
+  register:      already_installed
+
+- name:          Create root directory
+  file:          path={{root}} state=directory
+  register:      root_created
+
+- name:          Install
+  git:           repo=https://github.com/sstephenson/rbenv.git
+                 dest={{root}}
+                 version={{version}}
+                 update=yes
+  when:          already_installed|failed or root_created|changed
+  register:      installed
+
+- name:          Add binary to $PATH
+  sudo:          true
+  file:          path=/usr/local/bin/rbenv
+                 src={{root}}/bin/rbenv
+                 state=link
+  when:          installed|changed
+
+- name:          Add init script
+  sudo:          true
+  template:      src=init.sh.j2
+                 dest=/etc/profile.d/rbenv.sh
