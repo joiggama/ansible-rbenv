@@ -1,0 +1,13 @@
+language: python
+python: '2.7'
+before_install:
+- sudo apt-get update -qq
+install:
+- pip install ansible
+- mv test/ansible.cfg.example ansible.cfg
+script:
+- ansible-playbook -i test/inventory test/travis.yml --syntax-check
+notifications:
+  webhooks:
+    urls:
+      secure: E7vKKfo5vMjIQs0JblzAitQyrUAehLpIEiI0/IvVdF3ngO75Uhs11F352ApfgqqevJ13bcvB8YXI3cMg7NPRtjqJd/DX5sVioa+vfmJ3GfsUlMCKsjrKmFQyQQ5LZ2oz/4fw/dyVZGj0Q4HCRc2pENgzOhSIYkld3wX1WdrxUCw=
