@@ -1,6 +1,9 @@
 rbenv
 =========
 
+[![travis](https://img.shields.io/travis/joiggama/ansible-rbenv.svg)](https://travis-ci.org/joiggama/ansible-rbenv)
+[![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/joiggama/ansible-rbenv)
+
 This ansible role aims to install [rbenv](https://github.com/sstephenson/rbenv) on ubuntu systems.
 
 Requirements
