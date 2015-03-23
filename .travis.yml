@@ -7,7 +7,7 @@ install:
 - mv test/ansible.cfg.example ansible.cfg
 script:
 - ansible-playbook -i test/inventory test/travis.yml --syntax-check
-- ansible-playbook -i test/inventory tests/travis.yml --connection=local --sudo
+- ansible-playbook -i test/inventory test/travis.yml --connection=local --sudo
 notifications:
   webhooks:
     urls:
