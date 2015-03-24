@@ -9,12 +9,9 @@ install:
 script:
 - ansible-playbook -i test/inventory test/travis.yml --syntax-check
 - ansible-playbook -i test/inventory test/travis.yml --connection=local --sudo
-- >
-  ansible-playbook -i test/inventory test/travis.yml --connection=local --sudo
-  | grep -q "changed=1.*failed=0"
-  && (echo 'Idempotence test: pass' && exit 0)
-  || (echo 'Idempotence test: fail' && exit 1)
+- |
+  ansible-playbook -i test/inventory test/travis.yml --connection=local --sudo | grep -q "changed=1.*failed=0" && (echo 'Idempotence test: pass' && exit 0) || (echo 'Idempotence test: fail' && exit 1)
 notifications:
   webhooks:
     urls:
-      secure: ST1uCWq/6pte2Xdm1welt25arNFE9FPK+Q83e810LoiL5wcOFQtk99La/h5zbO/f3LmqpE30hj6ZX/vjFR8zqOs02rJKOxdbegU90wlC3guvcDIyNrVcNq4I5CkwNMEEGhBIbNZL+Vd8jaU744p6OEMBZIyg3ZmhmCr/uqY6/MQ=
+      secure: JmbVKUsvjjGyVMtU1wCBP/nbSJf2in+8vEk3OnY+jT2R/npfr/odRrN+mRGZK39eVvlSH1h87QqD49boqbfqbFptdu3CS5iVMvY56blLqCb2DpuIDKiIOPitShgKZkDRbGygSbdJthD3jV6dJW72nFDbK78AunR/YwUsEDZPzsg=
