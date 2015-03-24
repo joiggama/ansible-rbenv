@@ -16,6 +16,7 @@ Role Variables
 
 | Name                 | Default                           |                                        |
 |:--------------------:|:---------------------------------:|:--------------------------------------:|
+| apt_cache_expiration | 3600                              | Update apt cache window in seconds     |
 | install_dependencies | true                              | Whether or not to install dependencies |
 | root                 | /home/{{ansible_env.USER}}/.rbenv | Install path for rbenv                 |
 | version              | v0.4.0                            | Any git reference: branch, tag, commit |
@@ -33,6 +34,7 @@ Example Playbook
 - hosts: all
   roles:
      - role:                 joiggama.rbenv
+       apt_cache_expiration: 3600
        install_dependencies: true
        root:                 ~/.rbenv
        version:              v0.4.0
