@@ -2,14 +2,14 @@ rbenv
 =========
 
 [![travis](https://img.shields.io/travis/joiggama/ansible-rbenv/master.svg)](https://travis-ci.org/joiggama/ansible-rbenv)
-[![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/joiggama/ansible-rbenv)
+[![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/joiggama/ansible-ruby)
 
 This ansible role aims to install [rbenv](https://github.com/sstephenson/rbenv) on ubuntu systems.
 
 Requirements
 ------------
 
-The only dependency is `git` and it's already included in the main tasks, if you don't want this role to install it, override the default variable `install_dependencies` to equal `false` when including this role.
+None.
 
 Role Variables
 --------------
@@ -44,4 +44,4 @@ Example Playbook
 License
 -------
 
-The [MIT license](LICENSE.md)
+[MIT](LICENSE.md)

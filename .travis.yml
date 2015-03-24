@@ -17,4 +17,4 @@ script:
 notifications:
   webhooks:
     urls:
-      secure: E7vKKfo5vMjIQs0JblzAitQyrUAehLpIEiI0/IvVdF3ngO75Uhs11F352ApfgqqevJ13bcvB8YXI3cMg7NPRtjqJd/DX5sVioa+vfmJ3GfsUlMCKsjrKmFQyQQ5LZ2oz/4fw/dyVZGj0Q4HCRc2pENgzOhSIYkld3wX1WdrxUCw=
+      secure: ST1uCWq/6pte2Xdm1welt25arNFE9FPK+Q83e810LoiL5wcOFQtk99La/h5zbO/f3LmqpE30hj6ZX/vjFR8zqOs02rJKOxdbegU90wlC3guvcDIyNrVcNq4I5CkwNMEEGhBIbNZL+Vd8jaU744p6OEMBZIyg3ZmhmCr/uqY6/MQ=
