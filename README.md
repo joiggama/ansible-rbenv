@@ -31,13 +31,10 @@ Example Playbook
 ----------------
 
 ```yml
-- hosts: all
+- gather_facts: true
+  hosts:        all
   roles:
-     - role:                 joiggama.rbenv
-       apt_cache_expiration: 3600
-       install_dependencies: true
-       root:                 ~/.rbenv
-       version:              v0.4.0
+                - joiggama.rbenv
 ```
 
 
