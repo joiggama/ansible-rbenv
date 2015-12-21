@@ -19,7 +19,7 @@ Role Variables
 | rbenv_apt_cache_expiration | 3600                                | Update apt cache window in seconds     |
 | rbenv_install_dependencies | true                                | Whether or not to install dependencies |
 | rbenv_root                 | /home/{{ ansible_env.USER }}/.rbenv | Install path for rbenv                 |
-| rbenv_version              | v0.4.0                              | Any git reference: branch, tag, commit |
+| rbenv_version              | master                              | Any git reference: branch, tag, commit |
 
 
 Dependencies

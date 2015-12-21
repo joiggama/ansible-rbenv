@@ -2,4 +2,4 @@
 rbenv_apt_cache_expiration: 3600
 rbenv_install_dependencies: true
 rbenv_root:                 /home/{{ ansible_env.USER }}/.rbenv
-rbenv_version:              v0.4.0
+rbenv_version:              master

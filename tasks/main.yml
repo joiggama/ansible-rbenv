@@ -16,7 +16,10 @@
                  dest={{ rbenv_root }}
                  version={{ rbenv_version }}
                  update=yes
-  when:          rbenv_already_installed|failed or rbenv_root_created|changed
+  when:          rbenv_already_installed|failed or
+                 rbenv_root_created|changed or
+                 rbenv_version == "master" or
+                 rbenv_already_installed.stdout | replace("rbenv ", "") != rbenv_version
   register:      rbenv_installed
 
 - name:          Add binary to $PATH
