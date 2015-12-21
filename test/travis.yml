@@ -1,5 +1,4 @@
-- hosts:        localhost
-  remote_user:  root
+- hosts:       localhost
+  remote_user: root
   roles:
-                - role: ansible-rbenv
-                  root: ~/.rbenv
+    - ansible-rbenv

@@ -1,6 +1,6 @@
 - name: Update apt cache
   sudo: true
-  apt:  update_cache=yes cache_valid_time={{apt_cache_expiration}}
+  apt:  update_cache=yes cache_valid_time={{ rbenv_apt_cache_expiration }}
 
 - name: Install dependencies
   sudo: yes
