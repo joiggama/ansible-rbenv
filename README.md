@@ -14,12 +14,12 @@ None.
 Role Variables
 --------------
 
-| Name                       | Default                             |                                        |
-|:--------------------------:|:-----------------------------------:|:--------------------------------------:|
-| rbenv_apt_cache_expiration | 3600                                | Update apt cache window in seconds     |
-| rbenv_install_dependencies | true                                | Whether or not to install dependencies |
-| rbenv_root                 | /home/{{ ansible_env.USER }}/.rbenv | Install path for rbenv                 |
-| rbenv_version              | master                              | Any git reference: branch, tag, commit |
+| Name                       | Default                       |                                        |
+|:--------------------------:|:-----------------------------:|:--------------------------------------:|
+| rbenv_apt_cache_expiration | 3600                          | Update apt cache window in seconds     |
+| rbenv_install_dependencies | true                          | Whether or not to install dependencies |
+| rbenv_root                 | {{ ansible_env.HOME }}/.rbenv | Install path for rbenv (via facts)     |
+| rbenv_version              | master                        | Any git reference: branch, tag, commit |
 
 
 Dependencies
@@ -30,11 +30,11 @@ None.
 Example Playbook
 ----------------
 
-```yml
+```yaml
 - gather_facts: true
   hosts:        all
   roles:
-                - joiggama.rbenv
+    - joiggama.rbenv
 ```
 
 
